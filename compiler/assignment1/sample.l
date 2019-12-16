@@ -1,15 +1,17 @@
 %{
 	/* Declaration section */
-	#include <stdlib.h>
-	#include <stdio.h>
+	//#include <stdlib.h>
+	//#include <stdio.h>
 
 %}
 
 %%
 
-[\t]+		/*Ignore whitespaces*/ ;
+[\t]+|[\n]+		/*Ignore whitespaces and newline*/ ;
 
-. 		printf("%s", yytext);
+#include<[^>]+>    printf("%s ----> Header file\n",yytext);
+
+.               printf("%s", yytext);
 
 %%
 
