@@ -14,6 +14,8 @@
 %%
 
 int main(){
+	extern FILE *yyin;
+	yyin = fopen("example.c", "r");
 	yylex();
 	return 0;
 
