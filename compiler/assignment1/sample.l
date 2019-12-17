@@ -1,7 +1,8 @@
 %{
 	/* Declaration section */
-	//#include <stdlib.h>
-	//#include <stdio.h>
+	#include<stdlib.h>
+	#include<stdio.h>
+	#include<assert.h>
 
 %}
 
@@ -15,9 +16,11 @@
 
 %%
 
-int main(){
+int main(int argc, char* argv[]){
+	
+	assert(argc >= 2);
 	extern FILE *yyin;
-	yyin = fopen("example.c", "r");
+	yyin = fopen(argv[1], "r");
 	yylex();
 	return 0;
 
