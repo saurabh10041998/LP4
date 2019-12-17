@@ -9,9 +9,9 @@
 
 [\t]+|[\n]+		/*Ignore whitespaces and newline*/ ;
 
-#include<[^>]+>    printf("%s ----> Header file\n",yytext);
+#include[ ]*<[^>]+>    printf("%s ----> Header file\n",yytext);
 
-.               printf("%s", yytext);
+.               /*printf("%s\n", yytext)*/;
 
 %%
 
