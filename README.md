@@ -8,3 +8,7 @@ Note on compling lex:
 - gcc -o first lex.yy.c
 - ./first
 
+Usage
+-----
+ -	./test.sh <filename.c>
+
