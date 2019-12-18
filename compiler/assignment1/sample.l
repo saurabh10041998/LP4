@@ -8,13 +8,14 @@
 
 DIG [0-9]
 L [a-zA-Z_]
-
+datatype int|float|char|double|long
 %%
 
 [\t]+|[\n]+		/*Ignore whitespaces and newline*/ ;
 
 #include[ ]*<[^>]+>    printf("%s ----> Header file\n",yytext);
-int|float|char|double|struct|union|enum  printf("%s -----> Data Type\n", yytext); 
+{dtype}[ ]+L+\\(\\)  printf("%s ----> function signature..", yytext); 
+{datatype}|struct|union|enum  printf("%s -----> Data Type\n", yytext); 
 
 auto|break|switch|case|do|while|for|if|else[ ]*if|else|default|return|typedef 	printf("%s ----> Keyword\n",yytext);
 L?\"(\\.|[^\\"])*\"	printf("%s -----> string literal\n",yytext);
