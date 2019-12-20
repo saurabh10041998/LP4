@@ -12,3 +12,8 @@ Usage
 -----
  -	./test.sh <filename.c>
 
+TODO
+----
+* Comment both single line and multiline added but cannot extract text inside it 
+
+
