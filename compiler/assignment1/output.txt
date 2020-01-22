@@ -1,0 +1,47 @@
+(ROOT
+  (S
+    (VP (VB #include)
+      (NP
+        (NP (FW <stdio.h>) (FW int) (JJ main) (NN -LRB-))
+        (VP (VBG -RRB-) (-LRB- -LCB-)
+          (NP
+            (NP
+              (NP (NN printf))
+              (PRN (-LRB- -LRB-) (`` ``)
+                (NP
+                  (NP
+                    (NP (NNP Sample) (POS lex))
+                    (NN program))
+                  (SBAR
+                    (S
+                      (VP (TO to)
+                        (VP (VB study)
+                          (NP (NN format))))))
+                  (PP (IN of)
+                    (NP (NN output))))
+                ('' '') (-RRB- -RRB-)))
+            (PRN (: ;)
+              (S
+                (VP (VB return)
+                  (NP (CD 0))))
+              (: ;)))
+          (-RRB- -RCB-))))))
+
+root(ROOT-0, #include-1)
+compound(-LRB--5, <stdio.h>-2)
+compound(-LRB--5, int-3)
+amod(-LRB--5, main-4)
+dobj(#include-1, -LRB--5)
+acl(-LRB--5, -RRB--6)
+dobj(-RRB--6, printf-8)
+nmod:poss(program-13, Sample-11)
+case(Sample-11, lex-12)
+dep(printf-8, program-13)
+mark(study-15, to-14)
+acl(program-13, study-15)
+dobj(study-15, format-16)
+case(output-18, of-17)
+nmod:of(program-13, output-18)
+dep(printf-8, return-22)
+dobj(return-22, 0-23)
+
